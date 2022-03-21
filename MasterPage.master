@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+     <asp:ContentPlaceHolder id="title" runat="server">
+           </asp:ContentPlaceHolder>
+   </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <div>
+        <div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <a href="Home.aspx" style="color:yellowgreen;text-decoration:none">StafMan</a>
+       
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="Addstaff.aspx">Add Staff</a>
+    <a href="Viewstaff.aspx" >View Staff</a>
+    <a href="Editstaff.aspx">Edit Staff</a>
+    <a href="Adminprofile.aspx" >Your Profile</a>
+   
+  </div>
+</div>
+
+        <asp:ContentPlaceHolder id="contentbody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
